@@ -1,0 +1,24 @@
+# Unity generated
+/Library/
+/Temp/
+/Logs/
+/obj/
+/UserSettings/
+
+# Visual Studio
+/.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+
+# Build output
+/Build/
+/Builds/
+
+# Tools
+/.bezisidekick/
+
+# OS
+.DS_Store
+Thumbs.db
