@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Consumable\Types\Invincibility.cs" />
     <Compile Include="Assets\Scripts\Characters\Character.cs" />
     <Compile Include="Assets\Scripts\Themes\ThemeData.cs" />
+    <Compile Include="Assets\V1.0\Script\Character\CharacterSelector.cs" />
     <Compile Include="Assets\Scripts\Sounds\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Themes\ThemeDatabase.cs" />
     <Compile Include="Assets\Scripts\GameManager\TutorialState.cs" />
