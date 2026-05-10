@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\GameManager\LoadoutState.cs" />
     <Compile Include="Assets\Scripts\UI\Shop\IAPHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerData.cs" />
+    <Compile Include="Assets\V1.0\Script\Character\CharacterSlotDrawer.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\CoroutineHandler.cs" />
     <Compile Include="Assets\Scripts\Missions\Missions.cs" />
