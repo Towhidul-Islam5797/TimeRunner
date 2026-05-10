@@ -268,7 +268,8 @@ public class CharacterSelector : MonoBehaviour
             bool blockedBySunday = isSunday && slot.disabledOnSunday;
             bool shouldActivate = inRange && !blockedBySunday;
 
-            slot.character.SetActive(shouldActivate);
+            if (slot.character.activeSelf != shouldActivate)
+                slot.character.SetActive(shouldActivate);
 
             if (shouldActivate)
             {
@@ -278,9 +279,7 @@ public class CharacterSelector : MonoBehaviour
         }
 
         if (!anyActivated)
-        {
             Debug.LogWarning($"[CharacterSelector] No character matched hour {hour} (Sunday: {isSunday}). All characters inactive.");
-        }
     }
 }
 #endregion

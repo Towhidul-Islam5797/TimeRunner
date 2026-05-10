@@ -346,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b8df0d8ad6daff64cb15166eed66cadf,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: b8df0d8ad6daff64cb15166eed66cadf,
         type: 3}
@@ -974,7 +974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608495300
 Transform:
   m_ObjectHideFlags: 0
@@ -1004,22 +1004,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelector
   useCompressedTime: 0
   cycleDuration: 30
+  simulateSunday: 1
   slots:
+  - character: {fileID: 178391600}
+    startHour: 4
+    endHour: 5
+    disabledOnSunday: 0
   - character: {fileID: 1178535688}
     startHour: 10
     endHour: 11
+    disabledOnSunday: 0
   - character: {fileID: 1707433648}
     startHour: 6
     endHour: 9
+    disabledOnSunday: 0
   - character: {fileID: 1707433648}
     startHour: 12
     endHour: 15
+    disabledOnSunday: 0
+  - character: {fileID: 178391600}
+    startHour: 18
+    endHour: 21
+    disabledOnSunday: 0
   - character: {fileID: 1178535688}
     startHour: 22
     endHour: 23
-  - character: {fileID: 178391600}
-    startHour: 0
-    endHour: 10
+    disabledOnSunday: 0
 --- !u!4 &703167322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8044669281949152778, guid: b8df0d8ad6daff64cb15166eed66cadf,
@@ -3726,7 +3736,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fc5e42cfe784b5f47b3ef4a92975734e,
         type: 3}
       propertyPath: m_Name
-      value: Run with cape
+      value: C_Robin
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc5e42cfe784b5f47b3ef4a92975734e,
         type: 3}
@@ -3829,7 +3839,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98c0f0a4eafda8c448fee4d2bd6368ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 98c0f0a4eafda8c448fee4d2bd6368ea,
         type: 3}
