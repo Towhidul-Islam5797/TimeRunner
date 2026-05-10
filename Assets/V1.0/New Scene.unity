@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7913ad91b49e8cc4097fe308bf1415e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelector
-  useCompressedTime: 1
+  useCompressedTime: 0
   cycleDuration: 30
   slots:
   - character: {fileID: 1178535688}
