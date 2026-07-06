@@ -27,87 +27,87 @@
 // detailed debug logging.
 #endregion
 #region Milestone 3 Sprint 1 - Character Selection System Test
-//using System;
-//using UnityEngine;
+using System;
+using UnityEngine;
 
-//public class CharacterSelector : MonoBehaviour
-//{
-//    [Serializable]
-//    public class CharacterSlot
-//    {
-//        public GameObject character;
-//        public int startHour;
-//        public int endHour;
-//    }
+public class CharacterSelector : MonoBehaviour
+{
+    [Serializable]
+    public class CharacterSlot
+    {
+        public GameObject character;
+        public int startHour;
+        public int endHour;
+    }
 
-//    [Header("Time Settings")]
-//    [SerializeField] bool useCompressedTime = true;
-//    [SerializeField] float cycleDuration = 30f;
+    [Header("Time Settings")]
+    [SerializeField] bool useCompressedTime = true;
+    [SerializeField] float cycleDuration = 30f;
 
-//    [Header("Characters")]
-//    [SerializeField] CharacterSlot[] slots;
+    [Header("Characters")]
+    [SerializeField] CharacterSlot[] slots;
 
-//    void Awake()
-//    {
-//        int hour = useCompressedTime ? GetCompressedHour() : GetRealHour();
+    void Awake()
+    {
+        int hour = useCompressedTime ? GetCompressedHour() : GetRealHour();
 
-//        Debug.Log($"[CharacterSelector] Mode: {(useCompressedTime ? "Compressed" : "Real")} | Current hour: {hour}");
+        Debug.Log($"[CharacterSelector] Mode: {(useCompressedTime ? "Compressed" : "Real")} | Current hour: {hour}");
 
-//        ActivateCharacter(hour);
-//    }
+        ActivateCharacter(hour);
+    }
 
-//    void Update()
-//    {
-//        if (!useCompressedTime) return;
+    void Update()
+    {
+        if (!useCompressedTime) return;
 
-//        int hour = GetCompressedHour();
-//        ActivateCharacter(hour);
-//    }
+        int hour = GetCompressedHour();
+        ActivateCharacter(hour);
+    }
 
-//    int GetRealHour()
-//    {
-//        int hour = DateTime.Now.Hour;
-//        Debug.Log($"[CharacterSelector] Real device time - Hour: {hour}");
-//        return hour;
-//    }
+    int GetRealHour()
+    {
+        int hour = DateTime.Now.Hour;
+        Debug.Log($"[CharacterSelector] Real device time - Hour: {hour}");
+        return hour;
+    }
 
-//    int GetCompressedHour()
-//    {
-//        float progress = (Time.time % cycleDuration) / cycleDuration;
-//        int hour = Mathf.FloorToInt(progress * 24);
-//        return hour;
-//    }
+    int GetCompressedHour()
+    {
+        float progress = (Time.time % cycleDuration) / cycleDuration;
+        int hour = Mathf.FloorToInt(progress * 24);
+        return hour;
+    }
 
-//    void ActivateCharacter(int hour)
-//    {
-//        bool anyActivated = false;
+    void ActivateCharacter(int hour)
+    {
+        bool anyActivated = false;
 
-//        for (int i = 0; i < slots.Length; i++)
-//        {
-//            CharacterSlot slot = slots[i];
+        for (int i = 0; i < slots.Length; i++)
+        {
+            CharacterSlot slot = slots[i];
 
-//            if (slot.character == null)
-//            {
-//                Debug.LogWarning($"[CharacterSelector] Slot {i} has no character assigned. Skipping.");
-//                continue;
-//            }
+            if (slot.character == null)
+            {
+                Debug.LogWarning($"[CharacterSelector] Slot {i} has no character assigned. Skipping.");
+                continue;
+            }
 
-//            bool inRange = hour >= slot.startHour && hour <= slot.endHour;
-//            slot.character.SetActive(inRange);
+            bool inRange = hour >= slot.startHour && hour <= slot.endHour;
+            slot.character.SetActive(inRange);
 
-//            if (inRange)
-//            {
-//                Debug.Log($"[CharacterSelector] Activated: {slot.character.name} | Slot: {slot.startHour}:00 - {slot.endHour}:59 | Hour: {hour}");
-//                anyActivated = true;
-//            }
-//        }
+            if (inRange)
+            {
+                Debug.Log($"[CharacterSelector] Activated: {slot.character.name} | Slot: {slot.startHour}:00 - {slot.endHour}:59 | Hour: {hour}");
+                anyActivated = true;
+            }
+        }
 
-//        if (!anyActivated)
-//        {
-//            Debug.LogWarning($"[CharacterSelector] No character matched hour {hour}. All characters are inactive.");
-//        }
-//    }
-//}
+        if (!anyActivated)
+        {
+            Debug.LogWarning($"[CharacterSelector] No character matched hour {hour}. All characters are inactive.");
+        }
+    }
+}
 #endregion
 #region Milestone 3 Sprint 2 - Character Selection System Test with Real Time
 //using System;
@@ -192,94 +192,191 @@
 //    }
 //}
 #endregion
-#region Milestone 3 Sprint 3 - Character Selection System Test with Sunday Restriction
-using System; 
-using UnityEngine;
+//#region Milestone 3 Sprint 3 - Character Selection System Test with Sunday Restriction
+//using System; 
+//using UnityEngine;
 
-public class CharacterSelector : MonoBehaviour
-{
-    [Serializable]
-    public class CharacterSlot
-    {
-        public GameObject character;
-        public int startHour;
-        public int endHour;
-        public bool disabledOnSunday;
-    }
+//public class CharacterSelector : MonoBehaviour
+//{
+//    [Serializable]
+//    public class CharacterSlot
+//    {
+//        public GameObject character;
+//        public int startHour;
+//        public int endHour;
+//        public bool disabledOnSunday;
+//    }
 
-    [Header("Debug Settings")]
-    [Header("Time Settings")]
-    [SerializeField] bool useCompressedTime = true;
-    [SerializeField] float cycleDuration = 30f;
-    [SerializeField] bool simulateSunday = false;
+//    [Header("Debug Settings")]
+//    [Header("Time Settings")]
+//    [SerializeField] bool useCompressedTime = true;
+//    [SerializeField] float cycleDuration = 30f;
+//    [SerializeField] bool simulateSunday = false;
 
-    [Header("Characters")]
-    [SerializeField] CharacterSlot[] slots;
+//    [Header("Characters")]
+//    [SerializeField] CharacterSlot[] slots;
 
-    void Awake()
-    {
-        int hour = useCompressedTime ? GetCompressedHour() : GetRealHour();
-        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+//    void Awake()
+//    {
+//        // In compressed time mode, Time.time is 0 in Awake, which always resolves to
+//        // hour 0 — incorrectly deactivating all characters that don't cover that slot.
+//        // Let Update handle activation from the first frame instead.
+//        if (useCompressedTime) return;
 
-        Debug.Log($"[CharacterSelector] Mode: {(useCompressedTime ? "Compressed" : "Real")} | Hour: {hour} | Sunday: {isSunday}");
+//        int hour = GetRealHour();
+//        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
 
-        ActivateCharacter(hour, isSunday);
-    }
+//        Debug.Log($"[CharacterSelector] Mode: Real | Hour: {hour} | Sunday: {isSunday}");
 
-    void Update()
-    {
-        if (!useCompressedTime) return;
+//        ActivateCharacter(hour, isSunday);
+//    }
 
-        int hour = GetCompressedHour();
-        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+//    void Update()
+//    {
+//        if (!useCompressedTime) return;
 
-        ActivateCharacter(hour, isSunday);
-    }
+//        int hour = GetCompressedHour();
+//        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
 
-    int GetRealHour()
-    {
-        int hour = DateTime.Now.Hour;
-        Debug.Log($"[CharacterSelector] Real device time - Hour: {hour}");
-        return hour;
-    }
+//        ActivateCharacter(hour, isSunday);
+//    }
 
-    int GetCompressedHour()
-    {
-        float progress = (Time.time % cycleDuration) / cycleDuration;
-        int hour = Mathf.FloorToInt(progress * 24);
-        return hour;
-    }
+//    int GetRealHour()
+//    {
+//        int hour = DateTime.Now.Hour;
+//        Debug.Log($"[CharacterSelector] Real device time - Hour: {hour}");
+//        return hour;
+//    }
 
-    void ActivateCharacter(int hour, bool isSunday)
-    {
-        bool anyActivated = false;
+//    int GetCompressedHour()
+//    {
+//        float progress = (Time.time % cycleDuration) / cycleDuration;
+//        int hour = Mathf.FloorToInt(progress * 24);
+//        return hour;
+//    }
 
-        for (int i = 0; i < slots.Length; i++)
-        {
-            CharacterSlot slot = slots[i];
+//    void ActivateCharacter(int hour, bool isSunday)
+//    {
+//        bool anyActivated = false;
 
-            if (slot.character == null)
-            {
-                Debug.LogWarning($"[CharacterSelector] Slot {i} has no character assigned. Skipping.");
-                continue;
-            }
+//        for (int i = 0; i < slots.Length; i++)
+//        {
+//            CharacterSlot slot = slots[i];
 
-            bool inRange = hour >= slot.startHour && hour <= slot.endHour;
-            bool blockedBySunday = isSunday && slot.disabledOnSunday;
-            bool shouldActivate = inRange && !blockedBySunday;
+//            if (slot.character == null)
+//            {
+//                Debug.LogWarning($"[CharacterSelector] Slot {i} has no character assigned. Skipping.");
+//                continue;
+//            }
 
-            if (slot.character.activeSelf != shouldActivate)
-                slot.character.SetActive(shouldActivate);
+//            bool inRange = hour >= slot.startHour && hour <= slot.endHour;
+//            bool blockedBySunday = isSunday && slot.disabledOnSunday;
+//            bool shouldActivate = inRange && !blockedBySunday;
 
-            if (shouldActivate)
-            {
-                Debug.Log($"[CharacterSelector] Activated: {slot.character.name} | Slot: {slot.startHour}:00 - {slot.endHour}:59 | Hour: {hour}");
-                anyActivated = true;
-            }
-        }
+//            if (slot.character.activeSelf != shouldActivate)
+//                slot.character.SetActive(shouldActivate);
 
-        if (!anyActivated)
-            Debug.LogWarning($"[CharacterSelector] No character matched hour {hour} (Sunday: {isSunday}). All characters inactive.");
-    }
-}
-#endregion
+//            if (shouldActivate)
+//            {
+//                Debug.Log($"[CharacterSelector] Activated: {slot.character.name} | Slot: {slot.startHour}:00 - {slot.endHour}:59 | Hour: {hour}");
+//                anyActivated = true;
+//            }
+//        }
+
+//        if (!anyActivated)
+//            Debug.LogWarning($"[CharacterSelector] No character matched hour {hour} (Sunday: {isSunday}). All characters inactive.");
+//    }
+//}
+//#endregion
+
+//using System;
+//using UnityEngine;
+
+//public class CharacterSelector : MonoBehaviour
+//{
+//    [Serializable]
+//    public class CharacterSlot
+//    {
+//        public GameObject character;
+//        public int startHour;
+//        public int endHour;
+//        public bool disabledOnSunday;
+//    }
+
+//    [Header("Debug Settings")]
+//    [Header("Time Settings")]
+//    [SerializeField] bool useCompressedTime = true;
+//    [SerializeField] float cycleDuration = 30f;
+//    [SerializeField] bool simulateSunday = false;
+
+//    [Header("Characters")]
+//    [SerializeField] CharacterSlot[] slots;
+
+//    void Awake()
+//    {
+//        if (useCompressedTime) return;
+
+//        int hour = GetRealHour();
+//        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+
+//        Debug.Log($"[CharacterSelector] Mode: Real | Hour: {hour} | Sunday: {isSunday}");
+
+//        ActivateCharacter(hour, isSunday);
+//    }
+
+//    void Update()
+//    {
+//        if (!useCompressedTime) return;
+
+//        int hour = GetCompressedHour();
+//        bool isSunday = simulateSunday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+
+//        ActivateCharacter(hour, isSunday);
+//    }
+
+//    int GetRealHour()
+//    {
+//        int hour = DateTime.Now.Hour;
+//        Debug.Log($"[CharacterSelector] Real device time - Hour: {hour}");
+//        return hour;
+//    }
+
+//    int GetCompressedHour()
+//    {
+//        float progress = (Time.time % cycleDuration) / cycleDuration;
+//        int hour = Mathf.FloorToInt(progress * 24);
+//        return hour;
+//    }
+
+//    void ActivateCharacter(int hour, bool isSunday)
+//    {
+//        bool anyActivated = false;
+
+//        for (int i = 0; i < slots.Length; i++)
+//        {
+//            CharacterSlot slot = slots[i];
+
+//            if (slot.character == null)
+//            {
+//                Debug.LogWarning($"[CharacterSelector] Slot {i} has no character assigned. Skipping.");
+//                continue;
+//            }
+
+//            bool inRange = hour >= slot.startHour && hour <= slot.endHour;
+//            bool blockedBySunday = isSunday && slot.disabledOnSunday;
+//            bool shouldActivate = inRange && !blockedBySunday;
+
+//            if (slot.character.activeSelf != shouldActivate)
+//                slot.character.SetActive(shouldActivate);
+
+//            if (shouldActivate)
+//            {
+//                Debug.Log($"[CharacterSelector] Activated: {slot.character.name} | Slot: {slot.startHour}:00 - {slot.endHour}:59 | Hour: {hour}");
+//                anyActivated = true;
+//            }
+//        }
+
+//        if (!anyActivated)
+//            Debug.LogWarning($"[CharacterSelector] No character matched hour {hour} (Sunday: {isSunday}). All characters inactive.");
+//    }
+//}

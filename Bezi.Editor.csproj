@@ -64,16 +64,9 @@
     <Compile Include="Packages\com.bezi.sidekick\Editor\Bezi.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\Microsoft.CodeAnalysis.dll" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\Microsoft.CodeAnalysis.CSharp.dll" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\System.Runtime.CompilerServices.Unsafe.dll" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\System.Reflection.Metadata.dll" />
     <None Include="Packages\com.bezi.sidekick\Editor\Bezi.Editor.asmdef" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\Microsoft.CSharp.dll" />
     <None Include="Packages\com.bezi.sidekick\Editor\Plugins\bezi-websocket-sharp.dll" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\SharpToken.dll" />
     <None Include="Packages\com.bezi.sidekick\Editor\Plugins\BeziSidekickInternal.dll" />
-    <None Include="Packages\com.bezi.sidekick\Editor\Plugins\System.Collections.Immutable.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -656,10 +649,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@8bed5ad90189\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -668,12 +657,8 @@
       <HintPath>Assets\MobileDependencyResolver\Editor\Google.VersionHandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Google.IOSResolver">
@@ -698,10 +683,6 @@
     </Reference>
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>Assets\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
@@ -760,20 +741,12 @@
       <HintPath>Packages\com.merry-yellow.code-assist\Editor\ExternalReferences\Meryel.UnityCodeAssist.Logger.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\SharpToken.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Meryel.UnityCodeAssist.ProjectData">
       <HintPath>Packages\com.merry-yellow.code-assist\Editor\ExternalReferences\Meryel.UnityCodeAssist.ProjectData.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BeziSidekickInternal">
       <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\BeziSidekickInternal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages\com.bezi.sidekick\Editor\Plugins\System.Collections.Immutable.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
