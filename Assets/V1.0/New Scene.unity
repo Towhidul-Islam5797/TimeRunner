@@ -1215,6 +1215,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 703167322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &557115044
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 578008173}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_Name
+      value: TEst0111
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 47a1d686b626da54ab50cf1fc77c1fd6, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 144c52a43c11b8645b00ec1f5e2a9110, type: 3}
+--- !u!4 &557115045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 144c52a43c11b8645b00ec1f5e2a9110,
+    type: 3}
+  m_PrefabInstance: {fileID: 557115044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &578008172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1324,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 608495300}
+  - {fileID: 557115045}
   - {fileID: 1178535701}
   - {fileID: 140148537}
   - {fileID: 178391608}
@@ -1269,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &608495300
 Transform:
   m_ObjectHideFlags: 0
@@ -1297,7 +1377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7913ad91b49e8cc4097fe308bf1415e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelector
-  useCompressedTime: 1
+  useCompressedTime: 0
   cycleDuration: 30
   slots:
   - character: {fileID: 178391600}
@@ -3234,7 +3314,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 06becd9e1d70b804c8951b0b2fe2bb2b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
